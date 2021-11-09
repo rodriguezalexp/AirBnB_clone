@@ -1,6 +1,7 @@
 #!usr/bin/python3
 """Defining BaseModel class"""
 
+import models
 from datetime import datetime
 from uuid import uuid4
 
@@ -20,7 +21,7 @@ class BaseModel:
                 elif key == "__class__":
                     continue
                 else:
-                    self.__dict__[key] == value
+                    self.__dict__[key] = value
         else:
             self.id = str(uuid4())
             self.created_at = datetime.now()
@@ -32,12 +33,12 @@ class BaseModel:
 
     def to_dict(self):
         """returns a dictionary containing all keys/values of dict"""
-        cpy_dict = __dict__.copy()
-        cpy_dict["created_at"] = created_at.isoformat()
-        cpy_dict["updated_at"] = updated_at.isoformat()
+        cpy_dict = self.__dict__.copy()
+        cpy_dict["created_at"] = self.created_at.isoformat()
+        cpy_dict["updated_at"] = self.updated_at.isoformat()
         cpy_dict["__class__"] = __class__.__name__
         return cpy_dict
 
     def __str__(self):
         """string representacion of object"""
-        return ("[{}] ({:d}) {}").format(__class__.__name__, self.id, self.__dict__)
+        return ("[{}] ({}) {}").format(__class__.__name__, self.id, self.__dict__)
