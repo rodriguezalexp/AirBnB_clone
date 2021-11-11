@@ -28,12 +28,18 @@ class FileStorage:
         dict_new = {}
 
         for key, value in self.__objects.items():
-            dict_new[key] = value.to_dict()
-        with open(self.__file_path, 'w') as fd:
-            json.dump(dict_new, fd)
+            dict_new[key] = value.to_dict
+        with open(self.__file_path, 'w') as f:
+            json.dump(dict_new, f)
 
     def reload(self):
-        """"deserializes JSON file to __objects"""
-        pass
-
-    dsfdf
+        """Deserializes the JSON
+        file to __objects."""
+        try:
+            with open(self.__file_path, 'r') as file:
+                data = json.load(file)
+                for key in data:
+                    self.__objects[key] = classes[data[key]["__class__"]](
+                        **data[key])
+        except:
+            return
