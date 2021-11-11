@@ -22,12 +22,12 @@ class BaseModel:
                     continue
                 else:
                     self.__dict__[key] = value
-            models.storage.new(self)
         else:
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
             models.storage.new(self)
+            models.storage.save()
 
     def save(self):
         """update instance with the current datetime"""
