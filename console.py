@@ -36,15 +36,14 @@ class HBNBCommand(cmd.Cmd):
         else:
             if args[0] in classes:
                 newclass = classes[args[0]]()
-                newclass.FileStorage.save()
-                print newclass.id
+                newclass.save()
+                print(newclass.id)
 
             else:
                 print("** class doesn't exist **")
 
     def do_show(self, objs):
         """Show method"""
-        pass
 
     def do_destroy(self):
         """Destroy method"""
