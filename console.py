@@ -48,13 +48,15 @@ class HBNBCommand(cmd.Cmd):
         argc = len(objs)
         if argc == 0:
             print("** class name missing **")
+            return
         elif args[0] not in classes:
             print("** class doesn't exist **")
+            return
         elif argc == 1:
             print("** instance id missing **")
+            return
         __objects = storage.all()
         k_value = str("{}.{}".format(args[0], args[1]))
-        print(k_value)
         if k_value in __objects.keys():
             print(__objects[k_value])
         else:
