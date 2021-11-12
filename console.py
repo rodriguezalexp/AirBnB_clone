@@ -44,6 +44,18 @@ class HBNBCommand(cmd.Cmd):
 
     def do_show(self, objs):
         """Show method"""
+        args = objs.split()
+        argc = len(objs)
+        if argc == 0:
+            print("** class name missing **")
+        elif args[0] not in classes:
+            print("** class doesn't exist **")
+        elif argc == 1:
+            print("** instance id missing **")
+        __objects = storage.all()
+        
+        else:
+            print("** no instance found **")
 
     def do_destroy(self):
         """Destroy method"""
