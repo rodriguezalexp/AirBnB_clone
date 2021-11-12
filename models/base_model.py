@@ -16,7 +16,7 @@ class BaseModel:
                     self.created_at = datetime.strptime(
                         kwargs["created_at"], "%Y-%m-%dT%H:%M:%S.%f")
                 elif key == "updated_at":
-                    self.created_at = datetime.strptime(
+                    self.updated_at = datetime.strptime(
                         kwargs["updated_at"], "%Y-%m-%dT%H:%M:%S.%f")
                 elif key == "__class__":
                     continue

@@ -37,9 +37,10 @@ class FileStorage:
         """Deserializes the JSON
         file to __objects."""
         try:
-            with open(self.__file_path, 'w') as file:
-                data = json.load(file.read())
-                for key in data.keys():
-                    self.__objects = globals()[cl_asses](**value)
+            with open(self.__file_path, 'r') as file:
+                data = json.load(file)
+                for key, value in data.items():
+                    cl_asses = value['__class__']
+                    self.__objects[key] = globals()[cl_asses](**value)
         except Exception:
             pass
