@@ -53,7 +53,9 @@ class HBNBCommand(cmd.Cmd):
         elif argc == 1:
             print("** instance id missing **")
         __objects = storage.all()
-        
+        k_value = args[0] + '.' + args[1]
+        if k_value in __objects.key:
+            print(__objects)
         else:
             print("** no instance found **")
 
