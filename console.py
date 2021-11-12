@@ -3,6 +3,7 @@
 import cmd
 from models.base_model import BaseModel
 from models import storage
+import shlex
 
 
 class HBNBCommand(cmd.Cmd):
@@ -22,16 +23,19 @@ class HBNBCommand(cmd.Cmd):
         """Empty line"""
         pass
 
-    def do_create(self, line):
+    def do_create(self, objs):
         """Create method"""
-        shlex.split(line)
+        line = objs.split()
 
-    def do_show(self, obj):
+        if len(objs) != 1:
+            print
+
+    def do_show(self, objs):
         """Show method"""
-        if obj is not None:
+        if self.objs is not None:
             self.__objects.update(
                 {"{}.{}\
-".format(obj.__class__.__name__, obj.id): obj})
+".format(objs.__class__.__name__, obj.id): obj})
 
     def do_destroy(self):
         """Destroy method"""
