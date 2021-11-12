@@ -3,7 +3,11 @@
 import cmd
 from models.base_model import BaseModel
 from models import storage
+from models.engine.file_storage import FileStorage
+import models
 import shlex
+
+classes = {"BaseModel": BaseModel}
 
 
 class HBNBCommand(cmd.Cmd):
@@ -25,20 +29,22 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, objs):
         """Create method"""
-        objects = objs.split()
-        args = objects[0]
-        argc = len(objects)
+        args = objs.split()
+        argc = len(objs)
+        if argc == 0:
+            print("** class name missing **")
+        else:
+            if args[0] in classes:
+                newclass = classes[args[0]]()
+                newclass.FileStorage.save()
+                print newclass.id
 
-        if len(objs) != 1:
-
-            print
+            else:
+                print("** class doesn't exist **")
 
     def do_show(self, objs):
         """Show method"""
-        if self.objs is not None:
-            self.__objects.update(
-                {"{}.{}\
-".format(objs.__class__.__name__, obj.id): obj})
+        pass
 
     def do_destroy(self):
         """Destroy method"""
@@ -51,6 +57,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self):
         """Updates an instace based on class name and id"""
+        pass
 
 
 if __name__ == '__main__':
