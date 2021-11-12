@@ -25,9 +25,12 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, objs):
         """Create method"""
-        line = objs.split()
+        objects = objs.split()
+        args = objects[0]
+        argc = len(objects)
 
         if len(objs) != 1:
+
             print
 
     def do_show(self, objs):
