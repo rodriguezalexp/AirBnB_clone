@@ -6,6 +6,7 @@ import json
 
 class FileStorage:
     """class to serialize and deserialize json"""
+
     def __init__(self):
         self.__file_path = "file.json"
         self.__objects = {}
@@ -37,9 +38,8 @@ class FileStorage:
         file to __objects."""
         try:
             with open(self.__file_path, 'w') as file:
-                data = json.loads(file.read())
-                for key, value in data.items():
-                    cl_asses = value['__class__']
+                data = json.load(file.read())
+                for key in data.keys():
                     self.__objects = globals()[cl_asses](**value)
         except Exception:
             pass
