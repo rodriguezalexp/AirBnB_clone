@@ -1,3 +1,4 @@
+# 0x00. AirBnB clone - The console
 <div id="top"></div>
 [
 <!-- TABLE OF CONTENTS -->
@@ -25,9 +26,6 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
-
-# 0x00. AirBnB clone - The console
 
 
 <!-- ABOUT THE PROJECT -->
