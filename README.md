@@ -79,8 +79,8 @@ EOF  all  create  destroy  help  quit  show  update
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-Yael Uribe - [Github](https://github.com/YaelUribe) / [Twitter](https://twitter.com/NeisseriaGI) 
-Alexander Rodriguez - [Github](https://github.com/rodriguezalexp) / [Twitter](https://twitter.com/rodriguezalexp) 
+* Yael Uribe - [Github](https://github.com/YaelUribe) / [Twitter](https://twitter.com/NeisseriaGI)
+* Alexander Rodriguez - [Github](https://github.com/rodriguezalexp) / [Twitter](https://twitter.com/rodriguezalexp) 
 
 
 Project Link: [https://github.com/rodriguezalexp/AirBnB_clone](https://github.com/rodriguezalexp/AirBnB_clone)
