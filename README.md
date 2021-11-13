@@ -45,7 +45,7 @@ The console is the first segment of the AirBnB project at Holberton School that 
 * `update:` Update attributes of an object
 
 ## Installation
-* Clone this repository: `git clone "https://github.com/alexaorrico/AirBnB_clone.git"`
+* Clone this repository: `git clone "https://github.com/rodriguezalexp/AirBnB_clone.git"`
 * Access AirBnb directory: `cd AirBnB_clone`
 * Run hbnb(interactively): `./console` and enter command
 * Run hbnb(non-interactively): `echo "<command>" | ./console.py`
@@ -72,34 +72,37 @@ EOF  all  create  destroy  help  quit  show  update
 (hbnb) all MyModel
 ** class doesn't exist **
 (hbnb) create BaseModel
-7da56403-cc45-4f1c-ad32-bfafeb2bb050
+## Examples of use
+```
+vagrantAirBnB_clone$./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  all  create  destroy  help  quit  show  update
+
+(hbnb) all MyModel
+** class doesn't exist **
+(hbnb) create BaseModel
+121679db-b137-4729-99d0-d1c450fb4dbe
 (hbnb) all BaseModel
-[[BaseModel] (7da56403-cc45-4f1c-ad32-bfafeb2bb050) {'updated_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772167), 'id': '7da56403-cc45-4f1c-ad32-bfafeb2bb050', 'created_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772123)}]
-(hbnb) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
-[BaseModel] (7da56403-cc45-4f1c-ad32-bfafeb2bb050) {'updated_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772167), 'id': '7da56403-cc45-4f1c-ad32-bfafeb2bb050', 'created_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772123)}
-(hbnb) destroy BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
-(hbnb) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
+[[BaseModel] (121679db-b137-4729-99d0-d1c450fb4dbe) {'updated_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 79052), 'id': '121679db-b137-4729-99d0-d1c450fb4dbe', 'created_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 787654)}]
+(hbnb) show BaseModel 121679db-b137-4729-99d0-d1c450fb4dbe
+[BaseModel] (121679db-b137-4729-99d0-d1c450fb4dbe) {'updated_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 79052), 'id': '121679db-b137-4729-99d0-d1c450fb4dbe', 'created_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 787654)}
+(hbnb) destroy BaseModel 121679db-b137-4729-99d0-d1c450fb4dbe
+(hbnb) show BaseModel 121679db-b137-4729-99d0-d1c450fb4dbe
 ** no instance found **
 (hbnb) quit
 ```
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
+(hbnb) all BaseModel
+[[BaseModel] (121679db-b137-4729-99d0-d1c450fb4dbe) {'updated_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 79052), 'id': '121679db-b137-4729-99d0-d1c450fb4dbe', 'created_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 787654)}]
+(hbnb) show BaseModel 121679db-b137-4729-99d0-d1c450fb4dbe
+[BaseModel] (121679db-b137-4729-99d0-d1c450fb4dbe) {'updated_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 79052), 'id': '121679db-b137-4729-99d0-d1c450fb4dbe', 'created_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 787654)}
+(hbnb) destroy BaseModel 121679db-b137-4729-99d0-d1c450fb4dbe
+(hbnb) show BaseModel 121679db-b137-4729-99d0-d1c450fb4dbe
+** no instance found **
+(hbnb) quit
+```
 
 
 <!-- AUTHORS -->
