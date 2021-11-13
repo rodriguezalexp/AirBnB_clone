@@ -72,37 +72,15 @@ EOF  all  create  destroy  help  quit  show  update
 (hbnb) all MyModel
 ** class doesn't exist **
 (hbnb) create BaseModel
-## Examples of use
-```
-vagrantAirBnB_clone$./console.py
-(hbnb) help
-
-Documented commands (type help <topic>):
-========================================
-EOF  all  create  destroy  help  quit  show  update
-
-(hbnb) all MyModel
-** class doesn't exist **
-(hbnb) create BaseModel
-121679db-b137-4729-99d0-d1c450fb4dbe
+7da56403-cc45-4f1c-ad32-bfafeb2bb050
 (hbnb) all BaseModel
-[[BaseModel] (121679db-b137-4729-99d0-d1c450fb4dbe) {'updated_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 79052), 'id': '121679db-b137-4729-99d0-d1c450fb4dbe', 'created_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 787654)}]
-(hbnb) show BaseModel 121679db-b137-4729-99d0-d1c450fb4dbe
-[BaseModel] (121679db-b137-4729-99d0-d1c450fb4dbe) {'updated_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 79052), 'id': '121679db-b137-4729-99d0-d1c450fb4dbe', 'created_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 787654)}
-(hbnb) destroy BaseModel 121679db-b137-4729-99d0-d1c450fb4dbe
-(hbnb) show BaseModel 121679db-b137-4729-99d0-d1c450fb4dbe
+[[BaseModel] (7da56403-cc45-4f1c-ad32-bfafeb2bb050) {'updated_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 79052), 'id': '7da56403-cc45-4f1c-ad32-bfafeb2bb050', 'created_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 789078)}]
+(hbnb) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
+[BaseModel] (7da56403-cc45-4f1c-ad32-bfafeb2bb050) {'updated_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 79052), 'id': '7da56403-cc45-4f1c-ad32-bfafeb2bb050', 'created_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 789078)}
+(hbnb) destroy BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
+(hbnb) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
 ** no instance found **
 (hbnb) quit
-```
-(hbnb) all BaseModel
-[[BaseModel] (121679db-b137-4729-99d0-d1c450fb4dbe) {'updated_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 79052), 'id': '121679db-b137-4729-99d0-d1c450fb4dbe', 'created_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 787654)}]
-(hbnb) show BaseModel 121679db-b137-4729-99d0-d1c450fb4dbe
-[BaseModel] (121679db-b137-4729-99d0-d1c450fb4dbe) {'updated_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 79052), 'id': '121679db-b137-4729-99d0-d1c450fb4dbe', 'created_at': datetime.datetime(2021, 11, 13, 20, 44, 44, 787654)}
-(hbnb) destroy BaseModel 121679db-b137-4729-99d0-d1c450fb4dbe
-(hbnb) show BaseModel 121679db-b137-4729-99d0-d1c450fb4dbe
-** no instance found **
-(hbnb) quit
-```
 
 
 <!-- AUTHORS -->
@@ -112,14 +90,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-Yael Uribe - [Github](https://github.com/YaelUribe) / [Twitter]() 
+Yael Uribe - [Github](https://github.com/YaelUribe) / [Twitter](https://twitter.com/rodriguezalexp) 
 Alexander Rodriguez - [Github](https://github.com/rodriguezalexp) / [Twitter](https://twitter.com/rodriguezalexp) 
 
-<!-- CONTACT -->
-## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/rodriguezalexp/AirBnB_clone](https://github.com/rodriguezalexp/AirBnB_clone)
 
 
