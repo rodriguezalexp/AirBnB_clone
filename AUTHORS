@@ -1,1 +1,5 @@
-This is the authors file
+# This file lists all individuals having contributed content to the repository.
+# For how it is generated, see `hack/generate-authors.sh`.
+
+Alexander Rodríguez <2618@holbertonschool.com>
+Yael Uribe <2962@hotmail.com>
