@@ -31,18 +31,18 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 The console is the first segment of the AirBnB project at Holberton School that will collectively cover fundamental concepts of higher level programming. The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.
 
 #### Functionalities that the console will have :
 
-
-* ('create') Create a new object (ex: a new User or a new Place)
-* ('show') Prints the string representation of an instance based on the class name and id. 
-* ('destroy') Deletes an instance based on the class name and id
-* ('all') Prints all string representation of all instances based or not on the class name. 
-* ('update') Update attributes of an object
+* `quit` Quit command to exit the program
+* `EOF` method to EOF to exit with (`CTRL + D`)
+* `empyline` an empty line + ENTER shouldn’t execute anything
+* `create` Create a new object (ex: a new User or a new Place)
+* `show` Prints the string representation of an instance based on the class name and id. 
+* `destroy` Deletes an instance based on the class name and id
+* `all` Prints all string representation of all instances based or not on the class name. 
+* `update` Update attributes of an object
 
 
 <!-- GETTING STARTED -->
