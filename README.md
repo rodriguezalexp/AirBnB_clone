@@ -83,7 +83,7 @@ EOF  all  create  destroy  help  quit  show  update
 (hbnb) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
 ** no instance found **
 (hbnb) quit
-
+```
 
 <!-- AUTHORS -->
 ## AUTHORS
@@ -92,7 +92,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-Yael Uribe - [Github](https://github.com/YaelUribe) / [Twitter](https://twitter.com/rodriguezalexp) 
+Yael Uribe - [Github](https://github.com/YaelUribe) / [Twitter](https://twitter.com/NeisseriaGI) 
 Alexander Rodriguez - [Github](https://github.com/rodriguezalexp) / [Twitter](https://twitter.com/rodriguezalexp) 
 
 
