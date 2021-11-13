@@ -35,7 +35,8 @@ The console is the first segment of the AirBnB project at Holberton School that 
 * `all:` Prints all string representation of all instances based or not on the class name. 
 * `update:` Update attributes of an object
 
-<! -- Instalation -->
+<!-- ISTALLATION -->
+
 ## Installation
 * Clone this repository: `git clone "https://github.com/rodriguezalexp/AirBnB_clone.git"`
 * Access AirBnb directory: `cd AirBnB_clone`
