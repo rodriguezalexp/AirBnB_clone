@@ -77,8 +77,6 @@ EOF  all  create  destroy  help  quit  show  update
 <!-- AUTHORS -->
 ## AUTHORS
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 Yael Uribe - [Github](https://github.com/YaelUribe) / [Twitter](https://twitter.com/NeisseriaGI) 
