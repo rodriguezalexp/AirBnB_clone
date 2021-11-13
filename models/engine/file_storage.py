@@ -44,6 +44,3 @@ class FileStorage:
                     self.__objects[key] = globals()[cl_asses](**value)
         except Exception:
             pass
-
-
-sdsjds

@@ -7,7 +7,7 @@ from models.engine.file_storage import FileStorage
 import models
 import shlex
 
-classes = {"BaseModel"}
+classes = {"BaseModel": BaseModel}
 
 
 class HBNBCommand(cmd.Cmd):
