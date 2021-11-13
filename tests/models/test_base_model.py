@@ -10,7 +10,7 @@ class TestBaseModel(unittest.TestCase):
         self.object = BaseModel()
 
     def testDocstring_class(self):
-        """Check docstring in class"""
+        """Check docstring  in class"""
         self.assertIsNotNone(BaseModel.__doc__)
 
     def test_id(self):
