@@ -34,6 +34,9 @@ class Test_BaseModel(unittest.TestCase):
 
 	def test_save(self):
 		"""updating a public instance attr updated _at"""
+		temp = self.object.updated_at
+		self.object.save()
+		self.assertNotEqual(temp, self.object.updated_at)
 
 if __name__ == '__main__':
 	unittest.main()
