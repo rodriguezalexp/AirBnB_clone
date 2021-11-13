@@ -6,4 +6,4 @@ from .. import console
 class TestConsole(unittest.TestCase):
 	"""Unittests for console.py"""
 	def testEOF(self):
-		self.with_mock
+		pass
