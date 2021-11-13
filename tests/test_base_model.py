@@ -33,4 +33,7 @@ class Test_BaseModel(unittest.TestCase):
 		self.assertTrue(isinstance(nu_dict, dict))
 
 	def test_save(self):
-		""""""
+		"""updating a public instance attr updated _at"""
+
+if __name__ == '__main__':
+	unittest.main()
