@@ -5,6 +5,7 @@ from models.base_model import BaseModel
 
 
 class TestBaseModel(unittest.TestCase):
+    """Class to test BaseModel"""
 
     def setUp(self):
         self.object = BaseModel()
@@ -38,5 +39,3 @@ class TestBaseModel(unittest.TestCase):
         self.object.save()
         self.assertNotEqual(temp, self.object.updated_at)
 
-if __name__ == '__main__':
-    unittest.main()
