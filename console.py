@@ -2,7 +2,6 @@
 """
 Module: console
 """
-import cmd
 from models.base_model import BaseModel
 from models import storage
 from models.user import User
@@ -12,9 +11,10 @@ from models.place import Place
 from models.review import Review
 from models.state import State
 from models.engine.file_storage import FileStorage
-from datetime.import datetime
 import models
 import shlex
+from datetime import datetime
+import cmd
 
 classes = {"BaseModel": BaseModel, "User": User, "Amenity": Amenity,
             "City": City, "Place": Place, "Review": Review,
