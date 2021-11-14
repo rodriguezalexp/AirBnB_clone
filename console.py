@@ -46,7 +46,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, objs):
         """Create method"""
-        args = objs.split()
+        args = shlex.split(objs)
         argc = len(objs)
         if argc == 0:
             print("** class name missing **")
@@ -61,7 +61,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_show(self, objs):
         """Show method"""
-        args = objs.split()
+        args = shlex.split(objs)
         argc = len(objs)
         if argc == 0:
             print("** class name missing **")
@@ -82,7 +82,7 @@ class HBNBCommand(cmd.Cmd):
     def do_destroy(self, objs):
         """Destroy method"""
         """Deletes an instance based on the class and id"""
-        args = objs.split()
+        args = shlex.split(objs)
         argc = len(objs)
 
         if argc == 0:
@@ -101,7 +101,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, objs):
         """Prints string representations of instances"""
-        args = objs.split()
+        args = shlex.split(objs)
         objs_lst = []
         if len(args) == 0:
             for value in models.storage.all().values():
@@ -121,7 +121,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, objs):
         """Updates an instace based on class name and id"""
-        args = objs.split()
+        args = shlex.split(objs)
         argc = len(objs)
         if argc == 0:
             print("** class name missing **")
