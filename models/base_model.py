@@ -22,6 +22,7 @@ class BaseModel:
                     continue
                 else:
                     self.__dict__[key] = value
+            models.storage.new(self)
         else:
             self.id = str(uuid4())
             self.created_at = datetime.now()
