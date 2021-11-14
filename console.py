@@ -1,17 +1,28 @@
 #!/usr/bin/python3
-""""""
+"""
+Module: console
+"""
 import cmd
 from models.base_model import BaseModel
 from models import storage
+from models.user import User
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
 from models.engine.file_storage import FileStorage
+from datetime.import datetime
 import models
 import shlex
 
-classes = {"BaseModel": BaseModel}
+classes = {"BaseModel": BaseModel, "User": User, "Amenity": Amenity,
+            "City": City, "Place": Place, "Review": Review,
+            "State": State}
 
 
 class HBNBCommand(cmd.Cmd):
-    """"""
+    """Console class using cmd"""
 
     prompt = "(hbnb)"
 
@@ -73,6 +84,7 @@ class HBNBCommand(cmd.Cmd):
             return
         elif args[0] not in classes:
             print("** class doesn't exist **")
+            return
         if argc > 1:
             k_value = str("{}.{}".format(args[0], args[1]))
             if k_value in storage.all():
