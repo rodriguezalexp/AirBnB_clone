@@ -17,7 +17,16 @@ class TestConsole(unittest.TestCase):
         self.mocked(cmd="EOF", expected="")
 
     def test_emptyline(self):
-        """"Tests empty line.. do nothing"""
+        """Tests empty line.. do nothing"""
         self.mocked(cmd="\n", expected="")
-    
-    
+
+    def test_create(self):
+        """Tests if module create works"""
+        self.mocked(cmd="create", expected="** class name missing **")
+        self.mocked(cmd="create MyModel", expected="** class doesn´t exist **")
+
+    def test_show(self):
+        """Tests show()"""
+        self.mocked(cmd="show", expected="** class name missing **")
+        self.mocked(cmd="show MyModel", expected="** class doesn´t exist **")
+        self.mocked(cmd="show BaseModel", expected="** instance id missing **")
