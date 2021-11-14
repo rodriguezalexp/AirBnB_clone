@@ -17,10 +17,10 @@ class TestFilestorage(unittest.TestCase):
         """Check class, docstring"""
         self.assertIsNotNone(FileStorage.__doc__)
 
-    def testinstance(def):
+    def testinstance(self):
         """test if instance of object belongs to FileStorage"""
         self.assertIsInstance(self.object, FileStorage)
 
-    def test_all():
+    def test_all(self):
         """Tests all() method"""
         self.assertIs
