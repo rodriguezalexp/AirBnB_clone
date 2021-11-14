@@ -106,9 +106,24 @@ class HBNBCommand(cmd.Cmd):
                     nu_list.append(str(value))
             print(nu_list)
 
-    def do_update(self):
+    def do_update(self, objs):
         """Updates an instace based on class name and id"""
-        pass
+        args = objs.split()
+        argc = len(objs)
+        if argc == 0:
+            print("** class name missing **")
+            return
+        if args[0] not in classes:
+            print("** class doesn't exist **")
+            return
+        if argc == 1:
+            print("** instance id missing **")
+        instance = storage.all()
+        k_value = str("{}.{}".format(args[0], args[1]))
+        if k_value in instance.keys():
+            nu_obj = instance[k_value]
+            if argc == 2:
+                print("** attribue name missing **")
 
 
 if __name__ == '__main__':
