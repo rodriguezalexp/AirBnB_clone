@@ -30,7 +30,7 @@ classes = {
 class HBNBCommand(cmd.Cmd):
     """Console class using cmd"""
 
-    prompt = "(hbnb) "
+    prompt = '(hbnb) '
 
     def do_quit(self, line):
         """Quit command to exit the program"""
@@ -53,8 +53,8 @@ class HBNBCommand(cmd.Cmd):
         else:
             if args[0] in classes:
                 newclass = classes[args[0]]()
-                newclass.save()
                 print(newclass.id)
+                newclass.save()
 
             else:
                 print("** class doesn't exist **")
