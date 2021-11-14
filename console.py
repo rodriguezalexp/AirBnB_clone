@@ -30,7 +30,7 @@ classes = {
 class HBNBCommand(cmd.Cmd):
     """Console class using cmd"""
 
-    prompt = "(hbnb)"
+    prompt = "(hbnb) "
 
     def do_quit(self, line):
         """Quit command to exit the program"""
