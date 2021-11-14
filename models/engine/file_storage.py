@@ -16,8 +16,8 @@ class FileStorage:
         return self.__objects
 
     def new(self, obj):
-        """Sets in __objects obj with
-        key : obj_class_name.id"""
+        """Sets in __objects obj with key : obj_class_name.id"""
+
         if obj is not None:
             self.__objects.update(
                 {"{}.{}\

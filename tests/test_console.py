@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Test_BaseModel: unittest for base_model"""
 import unittest
+import console
 from unittest import mock  # we use this library so simulate an object...
 # a running console
 

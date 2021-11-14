@@ -16,9 +16,15 @@ import shlex
 from datetime import datetime
 import cmd
 
-classes = {"BaseModel": BaseModel, "User": User, "Amenity": Amenity,
-            "City": City, "Place": Place, "Review": Review,
-            "State": State}
+classes = {
+    "BaseModel": BaseModel,
+    "User": User,
+    "Amenity": Amenity,
+    "City": City,
+    "Place": Place,
+    "Review": Review,
+    "State": State
+}
 
 
 class HBNBCommand(cmd.Cmd):
