@@ -8,6 +8,7 @@ from models import storage
 from models.engine.file_storage import FileStorage
 import models
 import shlex
+from datetime import datetime
 
 classes = {"BaseModel": BaseModel}
 
@@ -124,7 +125,17 @@ class HBNBCommand(cmd.Cmd):
             nu_obj = instance[k_value]
             if argc == 2:
                 print("** attribue name missing **")
-
+                return
+            elif argc == 3:
+                print("** value missing **")
+                return
+            else:
+                nu_obj.__dict__[args[2]] = args[3][1:-1]
+                nu_obj.updated_at = datetime.now()
+                storage.save()
+        else:
+            print("** no instance found **")
+            return
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
