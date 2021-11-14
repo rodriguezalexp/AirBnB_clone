@@ -2,7 +2,7 @@
 """ Test_BaseModel: unittest for base_model"""
 import unittest
 from unittest import mock  # we use this library so simulate an object...
-                            # a running console
+# a running console
 
 
 class TestConsole(unittest.TestCase):
