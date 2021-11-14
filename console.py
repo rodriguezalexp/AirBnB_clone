@@ -1,28 +1,17 @@
 #!/usr/bin/python3
-"""
-Module: console
-"""
+""""""
 import cmd
 from models.base_model import BaseModel
 from models import storage
-from models.user import User
-from models.amenity import Amenity
-from models.city import City
-from models.place import Place
-from models.review import Review
-from models.state import State
 from models.engine.file_storage import FileStorage
 import models
 import shlex
-from datetime import datetime
 
-classes = {"BaseModel": BaseModel, "User": User, "Amenity": Amenity,
-            "City": City, "Place": Place, "Review": Review,
-            "State": State}
+classes = {"BaseModel": BaseModel}
 
 
 class HBNBCommand(cmd.Cmd):
-    """Console class using cmd"""
+    """"""
 
     prompt = "(hbnb)"
 
@@ -84,7 +73,6 @@ class HBNBCommand(cmd.Cmd):
             return
         elif args[0] not in classes:
             print("** class doesn't exist **")
-            return
         if argc > 1:
             k_value = str("{}.{}".format(args[0], args[1]))
             if k_value in storage.all():
@@ -94,56 +82,29 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
 
     def do_all(self, objs):
-        """Prints all string representation of all
-        instances based or not on the class name"""
+        """Prints string representations of instances"""
         args = objs.split()
-        argc = len(objs)
-        inst = storage.all()
-        if argc == 0:
-            nu_list = []
-            for key, value in inst.items():
-                nu_list.append(str(value()))
-            print(nu_list)
-            return
-        if args[0] not in classes:
-            print("** class doesn't exist **")
-            return
+        objs_lst = []
+        if len(args) == 0:
+            for value in models.storage.all().values():
+                objs_lst.append(str(value))
+            print("[", end="")
+            print(", ".join(objs_lst), end="")
+            print("]")
+        elif args[0] in classes:
+            for key in models.storage.all():
+                if args[0] in key:
+                    objs_lst.append(str(models.storage.all()[key]))
+            print("[", end="")
+            print(", ".join(objs_lst), end="")
+            print("]")
         else:
-            nu_list = []
-            for key, value in inst.items():
-                if args[0] == type(value).__name__:
-                    nu_list.append(str(value))
-            print(nu_list)
+            print("** class doesn't exist **")
 
-    def do_update(self, objs):
+    def do_update(self):
         """Updates an instace based on class name and id"""
-        args = objs.split()
-        argc = len(objs)
-        if argc == 0:
-            print("** class name missing **")
-            return
-        if args[0] not in classes:
-            print("** class doesn't exist **")
-            return
-        if argc == 1:
-            print("** instance id missing **")
-        instance = storage.all()
-        k_value = str("{}.{}".format(args[0], args[1]))
-        if k_value in instance.keys():
-            nu_obj = instance[k_value]
-            if argc == 2:
-                print("** attribue name missing **")
-                return
-            elif argc == 3:
-                print("** value missing **")
-                return
-            else:
-                nu_obj.__dict__[args[2]] = args[3][1:-1]
-                nu_obj.updated_at = datetime.now()
-                storage.save()
-        else:
-            print("** no instance found **")
-            return
+        pass
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
