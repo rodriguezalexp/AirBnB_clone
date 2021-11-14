@@ -2,7 +2,6 @@
 """
 Module: Unittest for file_storage.py
 """
-from _typeshed import Self
 import unittest
 from models.engine.file_storage import FileStorage
 
@@ -20,7 +19,3 @@ class TestFilestorage(unittest.TestCase):
     def testinstance(self):
         """test if instance of object belongs to FileStorage"""
         self.assertIsInstance(self.object, FileStorage)
-
-    def test_all(self):
-        """Tests all() method"""
-        self.assertIs
