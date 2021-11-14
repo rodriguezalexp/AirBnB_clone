@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """ Test_BaseModel: unittest for base_model"""
 import unittest
-from .. import console
+from console import HBNBCommand
+
 
 class TestConsole(unittest.TestCase):
-	"""Unittests for console.py"""
-	def testEOF(self):
-		pass
+    """Unittests for console.py"""
+    def test_EOF(self):
+        pass
