@@ -15,7 +15,7 @@ classes = {"BaseModel": BaseModel}
 
 
 class HBNBCommand(cmd.Cmd):
-    """"""
+    """Console class using cmd"""
 
     prompt = "(hbnb)"
 
