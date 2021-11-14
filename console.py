@@ -42,7 +42,7 @@ class HBNBCommand(cmd.Cmd):
 
     def emptyline(self):
         """Empty line"""
-        pass
+        return False
 
     def do_create(self, objs):
         """Create method"""
