@@ -39,5 +39,12 @@ class TestBaseModel(unittest.TestCase):
         self.object.save()
         self.assertNotEqual(temp, self.object.updated_at)
 
+    def test_str_repr(self):
+        """testing string representation"""
+        test = BaseModel()
+        t_str = "[{}] ({}) {}".format(test.__class__.__name__,
+                                      test.id, test.__dict__)
+        self.assertEqual(test.__str__(), t_str)
+
 if __name__ == '__main__':
     unittest.main()
