@@ -39,3 +39,5 @@ class TestBaseModel(unittest.TestCase):
         self.object.save()
         self.assertNotEqual(temp, self.object.updated_at)
 
+if __name__ == '__main__':
+    unittest.main()
