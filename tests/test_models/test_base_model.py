@@ -30,8 +30,18 @@ class TestBaseModel(unittest.TestCase):
 
     def test_to_dict(self):
         """Tests the retrieved object is a dictionary"""
-        nu_dict = self.object.to_dict()
+        test = BaseModel()
+        nu_dict = test.to_dict()
+        i_d = test.id
+        created = test.created_at.isoformat()
+        updated = test.updated_at.isoformat()
+        expected = {'_class__': 'Basemodel', 'id': i_d,
+                    'updated_at': updated, 'created_at': created}
         self.assertTrue(isinstance(nu_dict, dict))
+        self.assertDictEqual(nu_dict, expected)
+        test.save()
+        self.assertNotEqual(updated, test.updated_at.isoformat())
+        self.assertEqual(created, test.created_at.isoformat())
 
     def test_save(self):
         """updating a public instance attr updated _at"""
