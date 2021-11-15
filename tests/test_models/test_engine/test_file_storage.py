@@ -27,15 +27,18 @@ class TestFilestorage(unittest.TestCase):
 
     def test_new(self):
         """Check functionality of new()"""
-        pass
+        attclass = [att for att in dir(FileStorage)]
+        self.assertTrue("new" in attclass)
 
     def test_save(self):
         """save() method unittest"""
-        pass
+        attclass = [att for att in dir(FileStorage)]
+        self.assertTrue("save" in attclass)
 
     def test_reload(self):
         """reload() unittest"""
-        pass
+        attclass = [att for att in dir(FileStorage)]
+        self.assertTrue("reload" in attclass)
 
 if __name__ == '__main__':
     unittest.main()
