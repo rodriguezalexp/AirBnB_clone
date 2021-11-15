@@ -19,3 +19,21 @@ class TestFilestorage(unittest.TestCase):
     def testinstance(self):
         """test if instance of object belongs to FileStorage"""
         self.assertIsInstance(self.object, FileStorage)
+
+    def test_all(self):
+        """check if all() works"""
+        nu_dict = FileStorage.all()
+        self.assertIsInstance(nu_dict, dict)
+
+    def test_new(self):
+        """Check functionality of new()"""
+        pass
+
+    def test_save(self):
+        """save() method unittest"""
+        pass
+
+    def test_reload(self):
+        """reload() unittest"""
+        pass
+
