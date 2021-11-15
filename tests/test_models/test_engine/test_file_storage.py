@@ -37,3 +37,5 @@ class TestFilestorage(unittest.TestCase):
         """reload() unittest"""
         pass
 
+if __name__ == '__main__':
+    unittest.main()
