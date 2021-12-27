@@ -11,7 +11,6 @@ from models.city import City
 from models.place import Place
 import json
 
-
 class FileStorage:
     """class to serialize and deserialize json"""
     __file_path = "file.json"
@@ -25,19 +24,18 @@ class FileStorage:
         """Sets in __objects obj with key : obj_class_name.id"""
 
         if obj is not None:
-            self.__objects.update(
-                {"{}.{}\
-".format(obj.__class__.__name__, obj.id): obj})
-
+            key = obj.__class__.__name__ + "." + obj.id
+            self.__objects[key] = obj
+            
     def save(self):
         """"selrializes __objects to JSON file
         path: __file_path"""
-        dict_new = {}
+        json_new = {}
 
         for key, value in self.__objects.items():
-            dict_new[key] = value.to_dict()
+            json_new[key] = value.to_dict()
         with open(self.__file_path, 'w') as f:
-            json.dump(dict_new, f)
+            json.dump(json_new, f)
 
     def reload(self):
         """Deserializes the JSON
@@ -47,6 +45,6 @@ class FileStorage:
                 data = json.load(file)
                 for key, value in data.items():
                     cl_asses = value['__class__']
-                    self.__objects[key] = globals()[cl_asses](**value)
+                    self.__objects[key] = classes()[cl_asses](**value)
         except Exception:
             pass

@@ -44,20 +44,42 @@ class HBNBCommand(cmd.Cmd):
         """Empty line"""
         return False
 
-    def do_create(self, objs):
+    def helper_create(self, args):
+        """ """
+        new_dict = {}
+        for arg in args:
+            if "=" in arg:
+                cut = arg.split('=', 1)
+                key = cut[0]
+                value = cut[1]
+                if value[0] == value[-1] == '"':
+                    value = shlex.split(value)[0].replace('_', ' ')
+                else:
+                    try:
+                        value = int(value)
+                    except:
+                        try:
+                            value = float(value)
+                        except:
+                            continue
+                new_dict[key] = value
+        return new_dict
+
+    def do_create(self, arg):
         """Create method"""
-        args = shlex.split(objs)
-        argc = len(objs)
-        if argc == 0:
+        args = arg.split()
+        if not args:
             print("** class name missing **")
+            return False
         else:
             if args[0] in classes:
-                newclass = classes[args[0]]()
-                print(newclass.id)
-                newclass.save()
-
+                new_obj = self.helper_create(args[1:])
+                newclass = classes[args[0]](**new_obj)
             else:
                 print("** class doesn't exist **")
+                return False
+        print(newclass.id)
+        newclass.save()
 
     def do_show(self, objs):
         """Show method"""

@@ -20,6 +20,10 @@ class BaseModel:
                         kwargs["updated_at"], "%Y-%m-%dT%H:%M:%S.%f")
                 elif key == "__class__":
                     continue
+                elif 'id' not in kwargs.items():
+                    setattr(self, 'id', str(uuid4))
+                elif 'create_at' not in kwargs.items():
+                    setattr(self, 'create_at', datetime.datetime.now())
                 else:
                     self.__dict__[key] = value
             models.storage.new(self)
@@ -40,10 +44,10 @@ class BaseModel:
         d = self.__dict__.copy()
         d["created_at"] = self.created_at.isoformat()
         d["updated_at"] = self.updated_at.isoformat()
-        d["__class__"] = __class__.__name__
+        d["__class__"] =  __class__.__name__
         return d
 
     def __str__(self):
         """string representacion of object"""
-        return ("[{}] ({}) {}").format(__class__.__name__,
+        return ("[{}] ({}) {}").format(self.__class__.__name__,
                                        self.id, self.__dict__)
